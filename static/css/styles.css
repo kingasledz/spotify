@@ -259,11 +259,19 @@ h2, h3 {
 
 .linkedin-footer {
   color: white;
-  background-color: black;
+  background-color: transparent;
+
+  
+}
+
+.dropdown-menu {
+  text-align: center;
 }
 
 .linkedin-footer i {
   margin-right: .5em;
+  
+  
 }
 
 .linkedin-footer:hover {
@@ -301,6 +309,8 @@ h2, h3 {
 
 .dropdown-menu {
   background-color: transparent;
+  padding: 0 0 0;
+  margin: 0 0 0;
 }
 
 .table-condensed {
@@ -339,6 +349,22 @@ table {
 }
 
 
+.form-control {
+  cursor: default;
+}
+
+.dow {
+  cursor: default;
+}
+
+.datepicker-switch {
+  cursor: default;
+}
+
+.day {
+  cursor: default;
+}
+
 .year  {
   display: block;
   width: 23%;
@@ -346,7 +372,7 @@ table {
   line-height: 54px;
   float: left;
   margin: 1%;
-  cursor: pointer;
+  cursor: default;
   border-radius: 4px;
 }
 
@@ -358,6 +384,14 @@ table {
   line-height: 54px;
   float: left;
   margin: 1%;
-  cursor: pointer;
+  cursor: default;
   border-radius: 4px;
+}
+
+
+.table-condensed {
+  border: solid;
+  border-color: white;
+  
+  border-radius: 5px;
 }
