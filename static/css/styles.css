@@ -1,0 +1,363 @@
+#name {
+  font-size: 5rem;
+  text-align: left;
+  color: white;
+  padding-bottom: 2px;
+}
+
+
+@media (max-width: 800px) {
+  #name {
+    font-size: 3rem;
+  }
+
+}
+
+
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h2, h3 {
+
+  font-size: 3rem;
+
+  line-height: 1.5;
+
+  font-weight: 600;
+}
+
+
+
+.big-heading {
+
+  font-family: "Ubuntu";
+
+  font-size: 2.5rem;
+
+  line-height: 1.5;
+
+  font-weight: 900;
+
+  color: white;
+
+  text-align: center;
+
+  padding-bottom: 100px;
+
+}
+
+.container-fluid {
+  padding: 3% 15% 15%;
+  background-image: url(../images/picture.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+/* #top#leftright#bottom */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold
+
+}
+
+.nav-item {
+  padding: 0 18px;
+  color: #fff;
+
+}
+
+#beg {
+  color: #fff;
+}
+
+.nav-link {
+  font-size:1.2rem;
+  color: white;
+}
+
+
+.select-date {
+  padding: 2% 15% 2%;
+  background-image: url(../images/picture2.jpg);
+  background-size: cover;
+
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+
+
+
+}
+
+
+
+.section-2 {
+
+  padding-top: 20px;
+
+  font-family: "Ubuntu";
+  font-weight: 800;
+
+  color: white;
+  font-size: 3rem;
+
+  line-height: 1.5;
+
+
+  color: white;
+
+  padding-bottom: 40px;
+
+}
+
+
+
+
+.box {
+  padding: 1%;
+}
+
+
+#authentication {
+  padding: 2% 15% 3%;
+  color: #fff;
+
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+}
+
+
+.first-button {
+  width: 300px;
+}
+
+
+.carousel-item {
+  padding-left: 30px;
+
+}
+
+
+@media (max-width: 1028px) {
+
+
+  #title {
+    text-align: center;
+  }
+
+  .new {
+    text-align: left;
+  }
+
+}
+
+
+#footer {
+  padding: 1% 15% 3%;
+  color: black;
+  height: 100px;
+  background-color: transparent;
+}
+
+.footer-end {
+  padding: 0px 10px 10px;
+  color: white;
+
+}
+
+.footer-end:hover {
+  color: gray;
+}
+
+.btn {
+  padding-top: 10px;
+}
+
+
+
+.form-control {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-weight: 500;
+  color: white;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-family:"Montserrat";
+
+
+}
+
+.brand {
+  color: #319b8a;
+}
+
+.brand:hover {
+  color: white;
+}
+
+
+.date-picker-text {
+  font-size: 5rem;
+
+  line-height: 1.5;
+
+  font-weight: 900;
+
+  color: white;
+
+  text-align: center;
+}
+
+
+.memories {
+  font-family: "Ubuntu";
+
+  font-size: 2.5rem;
+
+  line-height: 1.5;
+
+  font-weight: 1000;
+
+  color: white;
+
+  text-align: center;
+
+  padding-top: 100px;
+}
+
+.arrow {
+  padding-top: 30px;
+  width: 60%;
+
+
+}
+
+.btn-success{
+  background-color: #319b8a!important;
+}
+
+
+
+.linkedin-footer {
+  color: white;
+  background-color: black;
+}
+
+.linkedin-footer i {
+  margin-right: .5em;
+}
+
+.linkedin-footer:hover {
+  color: white;
+}
+
+.title-image {
+  padding-top: 10%;
+  width: 60%;
+  position: absolute;
+  right: 30%;
+
+}
+
+#foo {
+  background-color: #263e3e;
+}
+
+.section-3 {
+  padding-top: 3px;
+
+  font-family: "Ubuntu";
+  font-weight: 800;
+
+  color: white;
+  font-size: 3rem;
+
+  line-height: 1.5;
+
+
+  color: white;
+
+  padding-bottom: 40px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+}
+
+.table-condensed {
+  color: white;
+  background-color: #28413e;
+  font-family: "Ubuntu";
+
+
+}
+
+table {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-family: "Ubuntu";
+
+}
+
+.month {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+
+.year  {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.century {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
