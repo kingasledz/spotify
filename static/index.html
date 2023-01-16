@@ -68,10 +68,12 @@
       <!-- <a class="navbar-brand brand" href=""><i class="bi bi-spotify"></i>TimeMachine</a> -->
     </div>
     <div class="col-lg-6">
+      <form action="/login"> 
       <h1 class="date-picker-text memories">Bring on the memories</h1>
       <h1 class="section-2">Pick a date</h1>
       <div class="input-group date" id="date" data-date-format="yyyy-mm-dd">
         <input
+          name="date"
           id="date-input"
           type="text"
           class="form-control"
@@ -82,13 +84,13 @@
         </span>
       </div>
       <h1 class="section-2"></h1>
-      <a
+      <button
         id="confirm-button"
         class="btn btn-light btn-lg first-button"
-        href="https://accounts.spotify.com/authorize?response_type=code&client_id=***REMOVED***&scope=playlist-modify-private&redirect_uri=http%3A%2F%2F127.0.0.1%3A5000%2Fauth"
-        role="button">
+        type="submit">
           CONFIRM
-      </a>
+      </button>
+    </form>
     </div>
   </div>
   
