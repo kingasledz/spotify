@@ -259,14 +259,17 @@ h2, h3 {
 
 .linkedin-footer {
   color: white;
-  background-color: transparent;
+  background-color: #263e3e
 
   
 }
 
 .dropdown-menu {
   text-align: center;
+  border: solid;
+  border-color: white;
 }
+
 
 .linkedin-footer i {
   margin-right: .5em;

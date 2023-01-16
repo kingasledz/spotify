@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, send_from_directory, session,
 from  flask_session import Session
 import os
 import spotipy
+import spo_create
 
 REDIRECT_URL = 'http://127.0.0.1:5000/auth'
 CLIENT_ID = "***REMOVED***"
@@ -113,7 +114,9 @@ def playlist():
 
     date_now = session.get('date', None)
 
-    return "hello" + date_now
+    playlist_link = spo_create.create_playlist(date_now,auth_manager)
+
+    return redirect('/playlist', playlist_link=playlist_link)
     
     # run magic
     # serve done.html
