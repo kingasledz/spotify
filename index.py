@@ -7,8 +7,7 @@ import spo_create
 REDIRECT_URL = 'http://127.0.0.1:5000/auth'
 CLIENT_ID = "***REMOVED***"
 CLIENT_SECRET = "***REMOVED***"
-# python3 -m venv .venv
-# source .venv/bin/activate
+
 app = Flask(__name__)
 
 
@@ -20,20 +19,13 @@ app.config['SESSION_FILE_DIR'] = './.flask_session/'
 Session(app)
 
 
-# Debug setting set to true
+
 app.debug = True
 
 
 
 @app.route('/')
 def index():
-    # cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
-    # auth_manager = spotipy.oauth2.SpotifyOAuth(client_id=CLIENT_ID,
-    #                                            client_secret=CLIENT_SECRET,
-    #                                            redirect_uri=REDIRECT_URL,
-    #                                            scope='playlist-modify-private',
-    #                                            cache_handler=cache_handler,
-    #                                            show_dialog=True)
     return app.send_static_file('index.html')
     
 
@@ -60,27 +52,6 @@ def get():
     return session.get('key', 'not set')
 
 
-# @app.route('/start')
-# def start():
-    # :80 for http, :443 for https
-    # URL: http://127.0.0.1:5000/start?parametr1=dupa&parametr2=blabla
-    # parametr1 = request.args.get("parametr1")
-    # parametr2 = request.args.get("parametr2")
-    # return "parametr1 is " + parametr1 + " and parametr2 is " + parametr2
-
-
-# res.redirect('https://accounts.spotify.com/authorize?' +
-#     querystring.stringify({
-#       response_type: 'code',
-#       client_id: client_id,
-#       scope: scope,
-#       redirect_uri: redirect_uri,
-#       state: state
-#     }));
-
-# 
-
-
 
 @app.route('/auth')
 def auth():
@@ -96,9 +67,10 @@ def auth():
         return redirect('/login')
 
     return redirect('/playlist')
-    # receive code
-    # exchange code for token
-    # read date from front-end
+
+
+
+
 
 @app.route('/playlist')
 def playlist():
@@ -111,17 +83,26 @@ def playlist():
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect('/login')
+        #raise ValueError
+        
 
     date_now = session.get('date', None)
 
     playlist_link = spo_create.create_playlist(date_now,auth_manager)
 
-    return render_template('playlist.html', playlist_link=playlist_link)
+
+
+    # try:
+    #     return render_template('playlist.html', playlist_link=playlist_link)
+    # except ValueError:
+    #     return redirect('/error')
+
     
-    # run magic
-    # serve done.html
-    # handle errors
-    
+
+@app.route('/error')
+def error():
+    return render_template('error.html')
+
 
 @app.route('/<path:path>')
 def static_files(path):

@@ -34,7 +34,7 @@ def create_playlist(date,auth_manager):
 
     song_uris = []
 
-    for i in range(99):
+    for i in range(40):
         try:
             track = song_list[i]
             artist = artist_list[i]
@@ -48,13 +48,13 @@ def create_playlist(date,auth_manager):
 
 
 
-    playlist = sp.user_playlist_create(user=user, name=f"{date} Billboard 100", public=False)
+    playlist = sp.user_playlist_create(user=user, name=f"{date} Billboard 40", public=False)
     playlist_id_num = playlist["id"]
 
     link = playlist["external_urls"]["spotify"]
 
 
     sp.playlist_add_items(playlist_id=playlist_id_num, items=song_uris)
-    print(f"New playlist '{date} Billboard 100' successfully created on Spotify!")
+    print(f"New playlist '{date} Billboard 40' successfully created on Spotify!")
 
     return link
