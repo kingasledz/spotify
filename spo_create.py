@@ -27,7 +27,7 @@ def create_playlist(date,auth_manager):
         song_list.append(stripped)
 
 
-    sp = spotipy.Spotify(auth_manager)
+    sp = spotipy.Spotify(auth_manager=auth_manager)
 
     user = sp.current_user()["id"]
 

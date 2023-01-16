@@ -116,7 +116,7 @@ def playlist():
 
     playlist_link = spo_create.create_playlist(date_now,auth_manager)
 
-    return redirect('/playlist', playlist_link=playlist_link)
+    return render_template('playlist.html', playlist_link=playlist_link)
     
     # run magic
     # serve done.html
