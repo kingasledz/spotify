@@ -20,7 +20,6 @@ def create_playlist(date,auth_manager):
 
 
 
-
     song_list = []
     for song in song_names:
         stripped = song.getText().strip()

@@ -44,15 +44,6 @@ def login():
     return render_template('login.html', auth_url=auth_url)
         
 
-
-
-
-@app.route('/get/')
-def get():
-    return session.get('key', 'not set')
-
-
-
 @app.route('/auth')
 def auth():
     cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
@@ -69,9 +60,6 @@ def auth():
     return redirect('/playlist')
 
 
-
-
-
 @app.route('/playlist')
 def playlist():
     cache_handler = spotipy.cache_handler.FlaskSessionCacheHandler(session)
@@ -83,26 +71,16 @@ def playlist():
 
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect('/login')
-        #raise ValueError
+   
         
 
     date_now = session.get('date', None)
 
-    playlist_link = spo_create.create_playlist(date_now,auth_manager)
-
-
-
-    # try:
-    #     return render_template('playlist.html', playlist_link=playlist_link)
-    # except ValueError:
-    #     return redirect('/error')
-
-    
-
-@app.route('/error')
-def error():
-    return render_template('error.html')
-
+    try:
+        playlist_link = spo_create.create_playlist(date_now,auth_manager)
+        return render_template('playlist.html', playlist_link=playlist_link)
+    except:
+        return render_template('error.html')
 
 @app.route('/<path:path>')
 def static_files(path):
