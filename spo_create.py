@@ -30,6 +30,7 @@ def create_playlist(date,auth_manager):
 
     user = sp.current_user()["id"]
 
+    
 
     song_uris = []
 

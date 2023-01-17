@@ -101,6 +101,27 @@ body {
   width: 300px;
 }
 
+.auth-button {
+  /* font-size: 2rem; */
+  color: white;
+  background-color: #3983a8;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.auth-button:hover {
+  color: white;
+}
+
+@media (max-width: 598px) {
+  .auth-button {
+    /* font-size: 2rem; */
+    white-space: normal;
+    word-wrap: break-word;
+    color: white;
+    background-color: #3983a8;
+  }
+  }
 
 #footer {
   padding: 1% 15% 3%;
@@ -119,13 +140,15 @@ body {
 
 .btn {
   padding-top: 10px;
+  margin-bottom: 30px;
 }
 
 
 
 .form-control {
   background-color: transparent;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   border: 2px solid white;
   font-weight: 500;
   color: white;
@@ -158,9 +181,30 @@ body {
   font-weight: 1000;
   color: white;
   text-align: center;
-  padding-top: 100px;
+  margin-top: 100px;
 }
 
+.throwback {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+.throwback {
+  font-size: 2rem;
+}
+}
+
+
+@media (max-width: 440px) {
+  .throwback {
+    font-size: 1.5rem;
+  }
+  }
 
 .linkedin-footer {
   color: white;
@@ -184,7 +228,7 @@ body {
 
 .title-image {
   padding-top: 2em;
-  width: 60%;
+  width: 300px;
   position: absolute;
   right: 2%;
   /* max-width: ; */
@@ -242,8 +286,20 @@ table {
 }
 
 
+
+
+
+.input-group>.form-control:not(:last-child) {
+   border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
 .form-control {
   cursor: default;
+ 
 }
 
 .dow {
@@ -322,12 +378,12 @@ table {
   }
 }
 
-@media (max-width: 804px) {
+/* @media (max-width: 804px) {
     .date-picker-text {
       font-size: 1.5rem;
       text-align: justify;
     }
-}
+} */
   
 /*
 X-Small 	None 	<576px
@@ -337,20 +393,23 @@ Large 	lg 	≥992px
 Extra large 	xl 	≥1200px
 Extra extra large 	xxl 	≥1400px
 */
+@media (max-width: 576px) {
+  .footer-end {
+    padding: 0px 1px 10px;
+  }
+  
+}
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 992px) {
     .title-image {
       display: none;
     }
     
 }
     
-@media (min-width: 1400px) {
-      .title-image {
-        display: none;
-      }
-      
-}
+
     
 @media (max-width: 804px) {
       .big-heading {
@@ -372,11 +431,11 @@ Extra extra large 	xxl 	≥1400px
     
 }
   
-@media (max-width: 804px) {
+/* @media (max-width: 804px) {
   .section-3  {
     font-size: 2rem;
   }
-}
+} */
 
 
 @media (max-width: 804px) {
@@ -395,17 +454,19 @@ Extra extra large 	xxl 	≥1400px
 
 
 
-@media (max-width: 804px) {
-.memories {
-    font-size: 1.7rem;
-  }
-}
 
-@media (max-width: 804px) {
+
+/* @media (max-width: 804px) {
   .btn {
     position: absolute;
     margin-top: 30px;
+    margin-bottom: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+} */
+
+
+.background {
+  color: rgba(255, 255, 255, 0.126);
 }
