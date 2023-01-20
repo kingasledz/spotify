@@ -3,6 +3,7 @@
 
 <head>
   {% include "head.html"%}
+  <meta http-equiv = "refresh" content = "0; url = /playlist"/>
 </head>
 
 <body>
@@ -15,14 +16,12 @@
         <section id="authentication">
           <div class="row">
             <div class="box col-lg-12">
-              <h1 class="section-3">Log in to Spotify</h1>
-              <a href="{{auth_url}}" class="btn btn-lg active auth-button" role="button"
-              aria-pressed="true">AUTHENTICATE WITH SPOTIFY</a>
+              <h1 class="section-3">Your playlist is being created...</h1>
             </div>
           </div>      
           <div class="row">
             <div class="box col-lg-12">
-              <h1 class="date-picker-text throwback">Iconic throwback tracks - all picked just for you!</h1>
+                <img src="../images/loading.gif">
             </div>
           </div>
         </section>
