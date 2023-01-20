@@ -57,7 +57,7 @@ def auth():
     if not auth_manager.validate_token(cache_handler.get_cached_token()):
         return redirect("/login")
 
-    return redirect("/playlist")
+    return redirect("/playlist") 
 
 
 @app.route("/playlist")
