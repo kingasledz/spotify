@@ -38,7 +38,7 @@ def create_playlist(date,auth_manager):
         try:
             track = song_list[i]
             artist = artist_list[i]
-            searchQuery = track + ' ' + artist
+            searchQuery = track + " " + artist
             searchResults = sp.search(q=searchQuery,market="US",limit=1)
             final_url = searchResults["tracks"]["items"][0]["uri"]
             song_uris.append(final_url)
