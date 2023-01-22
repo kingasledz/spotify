@@ -1,9 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-from spotipy.oauth2 import SpotifyClientCredentials
-import pprint
+
 
 
 
@@ -18,7 +16,7 @@ def create_playlist(date,auth_manager):
     artists = soup.select(selector="div li.lrv-u-width-100p span")
     artist_list = [artist.getText().strip() for artist in artists if not artist.getText().strip().isdigit() if "-" not in artist.getText().strip()] 
 
-
+    
 
     song_list = []
     for song in song_names:
@@ -54,6 +52,5 @@ def create_playlist(date,auth_manager):
 
 
     sp.playlist_add_items(playlist_id=playlist_id_num, items=song_uris)
-    print(f"New playlist '{date} Billboard 40' successfully created on Spotify!")
 
     return link
