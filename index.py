@@ -29,10 +29,6 @@ def index():
     return app.send_static_file("index.html")
 
 
-@app.route("/loading")
-def loading():
-    return render_template("error.html")
-
 
 @app.route("/login")
 def login():
