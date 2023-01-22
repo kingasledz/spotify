@@ -2,32 +2,34 @@
 <html>
 
 <head>
-    {% include "head.html"%}
+  {% include "inc-html/head.html"%}
 </head>
 
 <body>
   <div class="wrapper">
-  <section id="title">
-    <div class="container-fluid">
-      
-     <!-- Nav Bar -->
-     {% include "navbar.html"%}
-     <!-- Main Section -->
-      <section id="authentication">
-        <div class="row">
-          <div class="box col-lg-12">
-            <h1 class="section-3">Your playlist has been created!</h1>
-            <a href="{{playlist_link}}" class="btn  btn-lg active auth-button" role="button" aria-pressed="true">OPEN YOUR PLAYLIST</a>
-          </div>
+    <section id="main-page">
+      <div class="container-fluid">
+        
+        <!-- Nav Bar -->
+        {% include "inc-html/navbar.html"%}
+        <!-- Main Section -->
+        <section id="inner-section">
+          <div class="row">
+            <div class="box col-lg-12">
+              <h1 class="inner-section-text">Your playlist has been created!</h1>
+              <a href="{{playlist_link}}" class="btn  btn-lg active auth-button" role="button" aria-pressed="true">OPEN
+                YOUR PLAYLIST</a>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
-      </div>
-    </section>
-    
-    
-    <!-- Footer -->
-    {% include "footer.html"%}
-  </div>
-  {% include "scripts-list.html"%} 
-</body>
-</html>
+      
+      
+      <!-- Footer -->
+      {% include "inc-html/footer.html"%}
+    </div>
+    {% include "inc-html/scripts-list.html"%}
+  </body>
+  
+  </html>

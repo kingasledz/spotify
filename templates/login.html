@@ -2,36 +2,37 @@
 <html>
 
 <head>
-  {% include "head.html"%}
+  {% include "inc-html/head.html"%}
 </head>
 
 <body>
   <div class="wrapper">
-    <section id="title">
+    <section id="main-page">
       <div class="container-fluid">
         <!-- Nav Bar -->
-        {% include "navbar.html"%}
+        {% include "inc-html/navbar.html"%}
         <!-- Main Section -->
-        <section id="authentication">
+        <section id="inner-section">
           <div class="row">
             <div class="box col-lg-12">
-              <h1 class="section-3">Log in to Spotify</h1>
+              <h1 class="inner-section-text">Log in to Spotify</h1>
               <a href="{{auth_url}}" class="btn btn-lg active auth-button" role="button"
-              aria-pressed="true">AUTHENTICATE WITH SPOTIFY</a>
+                aria-pressed="true">AUTHENTICATE WITH SPOTIFY</a>
             </div>
-          </div>      
+          </div>
           <div class="row">
             <div class="box col-lg-12">
-              <h1 class="date-picker-text throwback">Iconic throwback tracks - all picked just for you!</h1>
+              <h1 class="throwback-tracks-text">Iconic throwback tracks - all picked just for you!</h1>
             </div>
           </div>
         </section>
       </div>
     </section>
-    
+
     <!-- Footer -->
-    {% include "footer.html"%}
+    {% include "inc-html/footer.html"%}
   </div>
-  {% include "scripts-list.html"%} 
+  {% include "inc-html/scripts-list.html"%}
 </body>
+
 </html>

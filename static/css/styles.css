@@ -1,31 +1,7 @@
+
 html, body, .wrapper {
   height: 100%
 }
-
-
-#name {
-  font-size: 5rem;
-  text-align: left;
-  color: white;
-  padding-bottom: 2px;
-}
-
-.wrong-date {
-  visibility: hidden;
-}
-
-.left {
-  text-align: left;
-}
-
-#date {
-  justify-content: center;
-}
-
-#date-input {
-  max-width: 600px;
-}
-
 
 body {
   text-align: center;
@@ -40,10 +16,43 @@ body {
 }
 }
 
+#main-page {
+  max-height: 800px;
+  min-height: calc(100vh - 100px);
+}
 
+
+@media (max-width: 992px) {
+
+#main-page {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-page {
+    padding: none;
+  }
+}
+
+.container-fluid {
+  padding: 3% 15% 15%;
+  /* padding: 0 15%; */
+}
+
+#inner-section {
+  padding: 2% 15% 3%;
+  color: #fff;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  #inner-section {
+    padding: none;
+  }
+}
 
 .big-heading {
-  
   font-family: "Ubuntu";
   font-size: 2.5rem;
   line-height: 1.5;
@@ -51,16 +60,86 @@ body {
   color: white;
   text-align: left;
   padding-bottom: 100px;
-  
+
 }
 
 
-.container-fluid {
-  padding: 3% 15% 15%;
-  /* height: 800px; */
+@media (max-width: 768px) {
+  .big-heading {
+    text-align: center;
+    left: 50%
+  }
 }
 
 
+.inner-section-text {
+  padding-top: 3px;
+  font-family: "Ubuntu";
+  font-weight: 800;
+  color: white;
+  font-size: 3rem;
+  line-height: 1.5;
+  color: white;
+  padding-bottom: 40px;
+}
+
+.throwback-tracks-text {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .throwback-tracks-text {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .throwback-tracks-text {
+    font-size: 1.5rem;
+  }
+}
+
+#ok-button {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.btn {
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.auth-button {
+  color: white;
+  background-color: #3983a8;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.auth-button:hover {
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .auth-button {
+    white-space: normal;
+    word-wrap: break-word;
+    color: white;
+    background-color: #3983a8;
+  }
+}
+
+.get-playlist-button {
+  width: 200px;
+}
+
+/* Navigation bar */
 .navbar {
   padding: 0 0 4.5rem;
 }
@@ -76,25 +155,111 @@ body {
   color: #fff;
 }
 
-#beg {
-  color: #fff;
-}
-
 .nav-link {
   font-size:1.2rem;
   color: white;
+}
+
+#nav-color {
+  color: #fff;
+}
+
+.dropdown-menu {
+  text-align: center;
+  border: solid;
+  border-color: white;
+  background-color: transparent;
+  padding: 0 0 0;
+  margin: 0 0 0;
+}
+
+.linkedin-icon {
+  color: white;
+  background-color: transparent;
+}
+
+.linkedin-icon i {
+  margin-right: .5em;
+}
+
+.linkedin-icon:hover {
+  color: white;
+}
+
+/* Footer */
+#footer-section {
+  background-color: #263e3e;
+}
+
+#footer {
+  padding: 1% 15% 3%;
+  background-color: #2a2a34;
+  height: 100px;
+  /* margin-top: 50px; */
+}
+
+.footer-end {
+  padding: 0px 10px 10px;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .footer-end {
+    padding: 0px 1px 10px;
+  }
+
+}
+
+.footer-background {
+  color: rgba(255, 255, 255, 0.126);
+}
+
+
+.left {
+  text-align: left;
+}
+
+
+#page-brand  {
+  font-size: 5rem;
+  text-align: left;
+  color: white;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  #page-brand  {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .select-date {
   padding: 2% 15% 2%;
   background: rgba(52, 50, 75, 0.5);
   min-height: 800px;
-  /* height: 800px; */
+}
+
+.date-picker-text {
+  font-size: 5rem;
+  line-height: 1.5;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+}
+
+.pick-date-text-style {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
 }
 
 
-
-.section-2 {
+.pick-date-text-style-2 {
   padding-top: 20px;
   font-family: "Ubuntu";
   font-weight: 800;
@@ -103,71 +268,24 @@ body {
   line-height: 1.5;
   color: white;
   padding-bottom: 40px;
-  
+
 }
 
-
+/* Date picker */
 .box {
   padding: 1%;
 }
 
-#authentication {
-  padding: 2% 15% 3%;
-  color: #fff;
-  height: 500px;
-  
+.input-group>.form-control:not(:last-child) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
 }
-
-
-.first-button {
-  width: 300px;
-}
-
-.auth-button {
-  /* font-size: 2rem; */
-  color: white;
-  background-color: #3983a8;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
-.auth-button:hover {
-  color: white;
-}
-
-@media (max-width: 598px) {
-  .auth-button {
-    /* font-size: 2rem; */
-    white-space: normal;
-    word-wrap: break-word;
-    color: white;
-    background-color: #3983a8;
-  }
-}
-
-#footer {
-  padding: 1% 15% 3%;
-  background-color: #2a2a34;
-  height: 100px;
-}
-
-.footer-end {
-  padding: 0px 10px 10px;
-  color: white;
-}
-
-.footer-end:hover {
-  color: gray;
-}
-
-.btn {
-  padding-top: 10px;
-  margin-bottom: 30px;
-}
-
-
 
 .form-control {
+  cursor: default;
   background-color: transparent;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -181,148 +299,11 @@ body {
   font-family:"Montserrat";
 }
 
-
-.brand:hover {
-  color: white;
-}
-
-
-.date-picker-text {
-  font-size: 5rem;
-  line-height: 1.5;
-  font-weight: 900;
-  color: white;
-  text-align: center;
-}
-
-
-.memories {
-  font-family: "Ubuntu";
-  font-size: 2.5rem;
-  line-height: 1.5;
-  font-weight: 1000;
-  color: white;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.throwback {
-  font-family: "Ubuntu";
-  font-size: 2.5rem;
-  line-height: 1.5;
-  font-weight: 1000;
-  color: white;
-  text-align: center;
-}
-
-@media (max-width: 700px) {
-  .throwback {
-    font-size: 2rem;
-  }
-}
-
-
-@media (max-width: 440px) {
-  .throwback {
-    font-size: 1.5rem;
-  }
-}
-
-.linkedin-footer {
-  color: white;
-  background-color: transparent;
-}
-
-.dropdown-menu {
-  text-align: center;
-  border: solid;
-  border-color: white;
-}
-
-
-.linkedin-footer i {
-  margin-right: .5em;
-}
-
-.linkedin-footer:hover {
-  color: white;
-}
-
-.title-image {
-  padding-top: 2em;
-  width: 300px;
-  position: absolute;
-  right: 2%;
-  /* max-width: ; */
-  
-}
-
-#foo {
-  background-color: #263e3e;
-}
-
-.section-3 {
-  padding-top: 3px;
-  font-family: "Ubuntu";
-  font-weight: 800;
-  color: white;
-  font-size: 3rem;
-  line-height: 1.5;
-  color: white;
-  padding-bottom: 40px;
-}
-
-
-
-.dropdown-menu {
-  background-color: transparent;
-  padding: 0 0 0;
-  margin: 0 0 0;
-}
-
-
-
-table {
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  font-family: "Ubuntu";
-}
-
-.month {
-  display: block;
-  width: 23%;
-  height: 54px;
-  line-height: 54px;
-  float: left;
-  margin: 1%;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-
-
 .form-control::placeholder {
   color: white;
   opacity: 1;
 }
 
-
-
-
-
-.input-group>.form-control:not(:last-child) {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  
-}
-
-.form-control {
-  cursor: default;
-  
-}
 
 .dow {
   cursor: default;
@@ -359,6 +340,7 @@ table {
   border-radius: 4px;
 }
 
+
 .decade {
   display: block;
   width: 23%;
@@ -370,6 +352,25 @@ table {
   border-radius: 4px;
 }
 
+.month {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+table {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-family: "Ubuntu";
+}
+
 .table-condensed {
   border: solid;
   border-color: white;
@@ -379,123 +380,38 @@ table {
   font-family: "Ubuntu";
 }
 
+#date {
+  justify-content: center;
+}
 
-#ok {
-  margin-top: 30px;
-  width: 200px;
+#date-input {
+  max-width: 600px;
+}
+
+.wrong-date {
+  visibility: hidden;
+  color: red;
 }
 
 
-@media (max-width: 800px) {
-  #name {
-    font-size: 2.5rem;
-  }
-  
+/* Images */
+.title-image {
+  padding-top: 2em;
+  width: 300px;
+  position: absolute;
+  right: 2%;
+  /* max-width: ; */
 }
-
-
-@media (max-width: 804px) {
-  .first-button {
-    width: 200px;
-  }
-}
-
-/* @media (max-width: 804px) {
-  .date-picker-text {
-    font-size: 1.5rem;
-    text-align: justify;
-  }
-} */
-
-/*
-X-Small 	None 	<576px
-Small 	sm 	≥576px
-Medium 	md 	≥768px
-Large 	lg 	≥992px
-Extra large 	xl 	≥1200px
-Extra extra large 	xxl 	≥1400px
-*/
-@media (max-width: 576px) {
-  .footer-end {
-    padding: 0px 1px 10px;
-  }
-  
-}
-
-
 
 @media (max-width: 992px) {
   .title-image {
     display: none;
   }
-  
 }
 
+/* Gif */
 
-
-@media (max-width: 804px) {
-  .big-heading {
-    text-align: center;
-    left: 50%
-  }
-}
-
-@media (max-width: 1028px) {
-  
-  
-  #title {
-    text-align: center;
-  }
-  
-  .new {
-    text-align: left;
-  }
-  
-}
-
-#title {
-  max-height: 800px;
-}
-/* @media (max-width: 804px) {
-  .section-3  {
-    font-size: 2rem;
-  }
-} */
-
-
-@media (max-width: 804px) {
-  #authentication {
-    padding: none;
-  }
-}
-
-
-@media (max-width: 804px) {
-  #title {
-    padding: none;
-  }
-}
-
-
-
-
-
-
-/* @media (max-width: 804px) {
-  .btn {
-    position: absolute;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-} */
-
-
-.background {
-  color: rgba(255, 255, 255, 0.126);
-}
-
-.wrong-date {
-  color: red;
+.gif-loading {
+  width: 100px;
+  height: 100px;
 }

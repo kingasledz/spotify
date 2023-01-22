@@ -2,41 +2,36 @@
 <html>
 
 <head>
-    {% include "head.html"%}
+  {% include "inc-html/head.html"%}
 </head>
-
 
 <body>
   <div class="wrapper">
-  <section id="title">
-    <div class="container-fluid">
-      
-           <!-- Nav Bar -->
-     {% include "navbar.html"%}
-     <!-- Main Section -->
-      
-      
-      <section id="authentication">
-        <div class="row">
-          <div class="box col-lg-12">
-            <h1 class="section-3">Something went wrong</h1>
+    <section id="main-page">
+      <div class="container-fluid">
+        <!-- Nav Bar -->
+        {% include "inc-html/navbar.html"%}
+        <!-- Main Section -->
+        <section id="inner-section">
+          <div class="row">
+            <div class="box col-lg-12">
+              <h1 class="inner-section-text">Something went wrong</h1>
+            </div>
           </div>
-          <div class="box col-lg-12">
-            <h1 class="section-3">Please try again</h1>
-            <a href="/" id="ok" class="btn  btn-lg auth-button" role="button" aria-pressed="true">OK</a>
+          <div class="row">
+            <div class="box col-lg-12">
+              <h1 class="throwback-tracks-text">Please try again</h1>
+              <a href="/" id="ok-button" class="btn btn-lg auth-button" role="button" aria-pressed="true">OK</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </section>
-    
-    
-   <!-- Footer -->
-   {% include "footer.html"%}
+
+    <!-- Footer -->
+    {% include "inc-html/footer.html"%}
   </div>
-  {% include "scripts-list.html"%} 
+  {% include "inc-html/scripts-list.html"%}
 </body>
+
 </html>
-  
- 
-  

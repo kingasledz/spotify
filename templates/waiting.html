@@ -2,35 +2,36 @@
 <html>
 
 <head>
-  {% include "head.html"%}
-  <meta http-equiv = "refresh" content = "0; url = /playlist"/>
+  {% include "inc-html/head.html"%}
+  <meta http-equiv = "refresh" content = "0; url = /playlist" />
 </head>
 
 <body>
   <div class="wrapper">
-    <section id="title">
+    <section id="main-page">
       <div class="container-fluid">
         <!-- Nav Bar -->
-        {% include "navbar.html"%}
+        {% include "inc-html/navbar.html"%}
         <!-- Main Section -->
-        <section id="authentication">
+        <section id="inner-section">
           <div class="row">
             <div class="box col-lg-12">
-              <h1 class="section-3">Your playlist is being created...</h1>
+              <h1 class="inner-section-text">Your playlist is being created...</h1>
             </div>
-          </div>      
+          </div>
           <div class="row">
             <div class="box col-lg-12">
-                <img src="../images/loading.gif">
+              <img src="../images/loading.gif" class="gif-loading">
             </div>
           </div>
         </section>
       </div>
     </section>
-    
+
     <!-- Footer -->
-    {% include "footer.html"%}
+    {% include "inc-html/footer.html"%}
   </div>
-  {% include "scripts-list.html"%} 
+  {% include "inc-html/scripts-list.html"%}
 </body>
+
 </html>
