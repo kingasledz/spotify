@@ -1,6 +1,7 @@
 $("#date").datepicker({
     startView: 3,
     endDate: new Date(),
+    autoclose: true,
 }).on('changeDate', function (e) { 
     if (e.date.getFullYear() < 1959 || e.date >= Date.now()) {
         document.querySelector('.wrong-date').style.visibility = 'visible';

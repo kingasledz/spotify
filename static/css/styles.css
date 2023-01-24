@@ -5,7 +5,7 @@ html, body, .wrapper {
 
 body {
   text-align: center;
-  background-image: url(../images/picture.jpg);
+  background-image: url(/static/images/picture.jpg);
   background-repeat: repeat-y;
   background-size: cover;
 }
@@ -315,6 +315,10 @@ body {
 
 .datepicker-switch {
   cursor: default;
+}
+
+.datepicker .disabled {
+  color: gray;
 }
 
 .day {
