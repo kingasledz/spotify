@@ -5,8 +5,8 @@ import spotipy
 import spo_create
 
 REDIRECT_URL = "http://127.0.0.1:5000/auth"
-CLIENT_ID = "***REMOVED***"
-CLIENT_SECRET = "***REMOVED***"
+CLIENT_ID = ""
+CLIENT_SECRET = ""
 
 app = Flask(__name__)
 
